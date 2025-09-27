@@ -1,4 +1,4 @@
-# PhalanxScreen - Educational Ransomware Analysis Tool
+# PhalanxScreen - Educational Ransomware Simulation
 
 ![License](https://img.shields.io/badge/License-GPLv3-blue?style=for-the-badge&logo=gnu)
 ![Platform](https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android)
@@ -6,27 +6,11 @@
 ![Build](https://img.shields.io/badge/Build-Sketchware-purple?style=for-the-badge&logo=androidstudio)
 ![Termux](https://img.shields.io/badge/Termux-Linux-black?style=for-the-badge&logo=termux)
 
-## ⚠️ DISCLAIMER / PERINGATAN
 
-```
-🔴 HANYA UNTUK TUJUAN EDUKASI
-🔴 EDUCATIONAL PURPOSES ONLY
-🔴 TIDAK UNTUK AKTIVITAS ILEGAL
-🔴 NOT FOR ILLEGAL ACTIVITIES
-```
-
-**Tool ini dibuat semata-mata untuk tujuan edukasi dan penelitian keamanan siber. Penggunaan untuk tujuan jahat atau ilegal adalah tanggung jawab pengguna sepenuhnya.**
-
----
-
-## 📋 Daftar Isi
-
-- [Pembukaan](#pembukaan)
-- [Apa itu PhalanxScreen?](#apa-itu-phalanxscreen)
-- [Cara Kerja Ransomware](#cara-kerja-ransomware)
-- [Instalasi dan Penggunaan](#instalasi-dan-penggunaan)
-- [Kontributor](#kontributor)
-- [Disclaimer Legal](#disclaimer-legal)
+![GitHub stars](https://img.shields.io/github/stars/REYHAN6610/PhalanxLocks?style=social)
+![GitHub forks](https://img.shields.io/github/forks/REYHAN6610/PhalanxLocks?style=social)
+![GitHub issues](https://img.shields.io/github/issues/REYHAN6610/PhalanxLocks)
+![GitHub last commit](https://img.shields.io/github/last-commit/REYHAN6610/PhalanxLocks)
 
 ---
 
@@ -86,6 +70,7 @@ graph TD
 1. **Phase 1 - Permission Acquisition**
    ```xml
    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+   <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
    ```
 
 2. **Phase 2 - Service Creation**
@@ -115,76 +100,46 @@ graph TD
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/REYHAN6610/PhalanxLocks.git
+git clone https://github.com/REYHAN6610/PhalanxLocks
 
 # 2. Masuk ke direktori
 cd PhalanxLocks
 
-# 3. Build menggunakan Sketchware atau Android Studio
-# File APK akan tersedia di folder /build/outputs/apk/
+# 3. Jalan kan script python
+pip install -r hook.txt
+python edit.py
 
-# 4. Install APK
-adb install PhalanxScreen.apk
+# 4. Conversikan ke aplikasi
+Berikan input yang di kirim script
+Buka ApkTool M Conversikan ke aplikasi
 
-# 5. Jalankan aplikasi dan berikan permission SYSTEM_ALERT_WINDOW
+# 4. Edit Aplikasi
+Anda bisa mengedit aplikasi sepeti
+
+
 ```
 
-#### Text Guide 2: Advanced Testing
+## ScreenShot + Tutorial
 
-```bash
-# Testing dengan Termux
-pkg update && pkg upgrade
-pkg install android-tools
+### Setelah membuat aplikasi nya
+![Step1](https://qu.ax/wwVsk.jpg)
 
-# Monitor log aktivitas
-adb logcat | grep PhalanxScreen
+### Buka Apk tools M dan cari dimana anda menaruh folder BuildApp
+![Step2](https://qu.ax/aSoCY.jpg)
 
-# Debugging overlay window
-adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'
+### Jika sudah di decompile anda bisa click aplikasi nya
+![Step2](https://qu.ax/lyfzD.jpg)
 
-# Force stop jika terjadi masalah
-adb shell am force-stop com.phalanx.screenlock
-```
+### Pilih Quick edit agar bisa di edit
+![Step](https://qu.ax/PZXXF.jpg)
 
-### Visual Guide
+### Anda di sini bisa mengedit seperti icon dan nama aplikasi nya bebas
+![Step](https://qu.ax/huyHV.jpg)
 
-#### Gambar 1: Permission Request Flow
-```
-[Installation] → [Permission Dialog] → [SYSTEM_ALERT_WINDOW] → [Grant Access]
-```
-*Tampilan dialog permission yang akan muncul saat pertama kali menjalankan aplikasi*
+### Jika anda sudah puas anda bisa save jika eror menggunakan aapt bisa ganti jadi aapt2
+![Step](https://qu.ax/EAiWa.jpg)
 
-#### Gambar 2: Active Overlay Screen
-```
-[Locked Screen Interface]
-┌─────────────────────────────┐
-│  🔒 DEVICE LOCKED BY         │
-│     PHALANXSCREEN           │
-│                             │
-│  Your device has been       │
-│  locked for educational     │
-│  demonstration purposes     │
-│                             │
-│  [Enter Unlock Code]        │
-│  [____________________]     │
-│                             │
-│  Educational Mode Active    │
-└─────────────────────────────┘
-```
 
-#### Gambar 3: Background Service Monitor
-```
-[Service Management]
-┌─────────────────────────────┐
-│ Running Services:           │
-│ ✅ PhalanxService           │
-│ ⏱️  Runtime: 00:45:23        │
-│ 🔋 Battery Usage: Low       │
-│ 📊 Memory: 15MB             │
-│                             │
-│ [Stop Service] [Restart]    │
-└─────────────────────────────┘
-```
 
 ---
 
@@ -206,46 +161,11 @@ Terima kasih kepada semua platform dan tools yang memungkinkan pengembangan proj
 
 | Platform | Kontribusi |
 |----------|------------|
-| **Sketchware** | IDE utama untuk pengembangan aplikasi Android |
+| **Sketchware** | Pembuatan Ransomware di android |
 | **GitHub** | Version control dan hosting repository |
-| **Termux** | Testing environment dan debugging tools |
+| **Termux** | Untuk menjalankan dan membuat aplikasi menggunakan python |
 | **DeepSeek** | AI assistance untuk dokumentasi dan coding |
 
----
-
-## 📜 Disclaimer Legal
-
-### ⚖️ Ketentuan Penggunaan
-
-1. **Tujuan Edukasi Murni**: Tool ini dibuat untuk pembelajaran dan penelitian akademik
-2. **Larangan Penggunaan Jahat**: Dilarang keras menggunakan untuk aktivitas illegal
-3. **Tanggung Jawab Pengguna**: Developer tidak bertanggung jawab atas penyalahgunaan
-4. **Compliance**: Pastikan penggunaan sesuai dengan hukum setempat
-5. **Ethical Use**: Gunakan hanya pada device sendiri atau dengan izin explicit
-
-### 🔒 Keamanan dan Privasi
-
-- Tool ini tidak mengumpulkan data pribadi
-- Tidak ada koneksi ke server external
-- Semua aktivitas bersifat lokal
-- Kode source tersedia untuk audit
-
-### 📞 Kontak dan Support
-
-Jika ada pertanyaan terkait penggunaan edukatif:
-
-- **Repository Issues**: [GitHub Issues](https://github.com/REYHAN6610/PhalanxLocks/issues)
-- **Email**: educational.security@example.com
-- **Educational Purpose Only**: Untuk keperluan penelitian akademik
-
----
-
-## 📊 Statistics
-
-![GitHub stars](https://img.shields.io/github/stars/REYHAN6610/PhalanxLocks?style=social)
-![GitHub forks](https://img.shields.io/github/forks/REYHAN6610/PhalanxLocks?style=social)
-![GitHub issues](https://img.shields.io/github/issues/REYHAN6610/PhalanxLocks)
-![GitHub last commit](https://img.shields.io/github/last-commit/REYHAN6610/PhalanxLocks)
 
 ---
 
