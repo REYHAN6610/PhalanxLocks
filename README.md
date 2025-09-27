@@ -1,11 +1,10 @@
 # PhalanxScreen - Educational Ransomware Analysis Tool
 
-![License](https://img.shields.io/badge/License-Educational%20Only-red)
-![Platform](https://img.shields.io/badge/Platform-Android-green)
-![API Level](https://img.shields.io/badge/API-Below%20Android%208-orange)
-![Status](https://img.shields.io/badge/Status-Educational%20Research-blue)
-![Language](https://img.shields.io/badge/Language-Java-brightgreen)
-![Build](https://img.shields.io/badge/Build-Sketchware-purple)
+![License](https://img.shields.io/badge/License-GPLv3-blue?style=for-the-badge&logo=gnu)
+![Platform](https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android)
+![Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=java)
+![Build](https://img.shields.io/badge/Build-Sketchware-purple?style=for-the-badge&logo=androidstudio)
+![Termux](https://img.shields.io/badge/Termux-Linux-black?style=for-the-badge&logo=termux)
 
 ## ⚠️ DISCLAIMER / PERINGATAN
 
